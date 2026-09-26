@@ -1,28 +1,28 @@
-# Projeto SQL - Sistema de Vendas
+# SQL - Sistema de Vendas
 
-Projeto desenvolvido para praticar e demonstrar conhecimentos em **SQL e banco de dados relacionais**, utilizando o SQL Server.
+Projeto desenvolvido para estudo e prática de **SQL e banco de dados relacionais** utilizando **Microsoft SQL Server**.
 
-O projeto simula o banco de dados de uma loja, permitindo o cadastro de clientes, categorias, produtos e pedidos, além do relacionamento entre essas informações.
+O projeto simula o banco de dados de uma loja, com cadastro de clientes, categorias, produtos e pedidos. O objetivo é praticar desde a criação e manipulação das tabelas até consultas envolvendo relacionamentos, agregações e análises dos dados.
 
 ## Objetivo
 
-O objetivo é desenvolver um banco de dados do zero e utilizar consultas SQL para responder perguntas relacionadas aos dados da loja.
+Construir um banco de dados relacional do zero e utilizar SQL para consultar e analisar os dados de uma loja.
 
-Além da criação das tabelas, o projeto será utilizado para praticar consultas de diferentes níveis de dificuldade, desde consultas básicas até relacionamentos e análises mais completas dos dados.
+O projeto aborda consultas de diferentes níveis de complexidade, utilizando filtros, funções de agregação, relacionamentos entre tabelas, subconsultas e outros recursos do SQL.
 
-## Estrutura do Banco
+## Banco de Dados
 
-O banco de dados é composto pelas seguintes tabelas:
+O banco é composto por cinco tabelas:
 
-* **clientes** — informações dos clientes cadastrados.
-* **categorias** — categorias dos produtos.
-* **produtos** — produtos disponíveis na loja.
-* **pedidos** — pedidos realizados pelos clientes.
-* **itens_pedido** — produtos, quantidades e valores presentes em cada pedido.
+| Tabela         | Descrição                                       |
+| -------------- | ----------------------------------------------- |
+| `clientes`     | Dados dos clientes cadastrados                  |
+| `categorias`   | Categorias dos produtos                         |
+| `produtos`     | Produtos disponíveis na loja                    |
+| `pedidos`      | Pedidos realizados pelos clientes               |
+| `itens_pedido` | Produtos e quantidades presentes em cada pedido |
 
-## Relacionamentos
-
-As tabelas possuem relacionamentos por meio de chaves primárias e estrangeiras:
+### Relacionamentos
 
 ```text
 clientes
@@ -36,76 +36,81 @@ clientes
                           └── categorias
 ```
 
-## Conceitos e comandos praticados
+Os relacionamentos são implementados por meio de **PRIMARY KEY** e **FOREIGN KEY**.
 
-Durante o desenvolvimento do projeto serão utilizados conceitos como:
+## Dados
 
-* CREATE TABLE
-* INSERT INTO
-* SELECT
-* WHERE
-* ORDER BY
-* DISTINCT
-* BETWEEN
-* LIKE
-* IN
-* COUNT
-* SUM
-* AVG
-* MAX
-* MIN
-* GROUP BY
-* HAVING
-* INNER JOIN
-* LEFT JOIN
+O banco possui dados de exemplo distribuídos da seguinte forma:
+
+* 10 clientes
+* 6 categorias
+* 20 produtos
+* 15 pedidos
+* 31 itens de pedidos
+
+Os dados foram criados para possibilitar diferentes tipos de consultas e análises.
+
+## Conceitos Praticados
+
+Durante o desenvolvimento do projeto são praticados:
+
+* `CREATE TABLE`
+* `INSERT INTO`
+* `SELECT`
+* `WHERE`
+* `ORDER BY`
+* `DISTINCT`
+* `BETWEEN`
+* `LIKE`
+* `IN`
+* `COUNT`
+* `SUM`
+* `AVG`
+* `MAX`
+* `MIN`
+* `GROUP BY`
+* `HAVING`
+* `INNER JOIN`
+* `LEFT JOIN`
 * Subconsultas
-* CASE
-* UNION
-* VIEW
-* PRIMARY KEY
-* FOREIGN KEY
+* `CASE`
+* `UNION`
+* `VIEW`
+* `PRIMARY KEY`
+* `FOREIGN KEY`
 
-## Consultas e perguntas
+## Consultas
 
-As consultas serão organizadas a partir de perguntas sobre os dados, buscando simular situações que poderiam surgir em uma análise de dados de uma loja.
+As consultas são baseadas em situações que poderiam ser encontradas em uma análise de dados de uma loja.
 
 Alguns exemplos:
 
 * Quantos clientes estão cadastrados?
-* Quais produtos pertencem a determinada categoria?
+* Quais clientes estão ativos?
+* Quais produtos pertencem a cada categoria?
 * Qual é o preço médio dos produtos?
+* Qual é o produto mais caro?
+* Qual é o produto mais barato?
+* Quantos produtos existem em cada categoria?
 * Quantos pedidos cada cliente realizou?
+* Quais clientes nunca realizaram uma compra?
+* Quais produtos nunca foram vendidos?
 * Qual produto foi mais vendido?
 * Qual cliente realizou mais pedidos?
 * Qual cliente gastou mais?
 * Qual foi o faturamento total da loja?
 * Qual categoria possui maior faturamento?
-* Quais clientes nunca realizaram uma compra?
-* Quais produtos nunca foram vendidos?
+* Quais produtos possuem preço acima da média?
+* Qual foi o valor médio dos pedidos?
 
 ## Tecnologias
 
-* **SQL**
-* **Microsoft SQL Server**
-* **SQL Server Management Studio (SSMS)**
-
-## Organização dos arquivos
-
-```text
-projeto-sql-loja/
-│
-├── 01_criacao_tabelas.sql
-├── 02_insercao_dados.sql
-├── 03_consultas_basicas.sql
-├── 04_agregacoes.sql
-├── 05_joins.sql
-├── 06_subconsultas.sql
-├── 07_consultas_avancadas.sql
-└── README.md
-```
+* SQL
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
 
 ## Status
 
 Em desenvolvimento.
 
-Projeto criado para estudos, prática de SQL e construção de portfólio.
+Projeto criado para estudo, prática de SQL e construção de portfólio.
