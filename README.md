@@ -161,10 +161,4 @@ Em desenvolvimento.
 
 Projeto criado para estudo, prática de SQL e construção de portfólio.
 
-## Autor
 
-**Sandro Hugo**
-
-Estudante de Ciência da Computação.
-
-[GitHub](https://github.com/Sandro-Hugo)
